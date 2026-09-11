@@ -131,7 +131,17 @@
     <section class="section-shell achievement-section">
       <div class="section-heading"><p class="section-index" data-i18n="achievementIndex">06 / ACHIEVEMENTS</p><button class="text-button" id="addAchievementTrigger" type="button" data-i18n-html="addAchievement">Add achievement <span>+</span></button></div>
       <div class="achievement-list" id="achievementsList" aria-live="polite">
-        <p class="empty-achievements" data-i18n="emptyAchievements">Your certificates, awards, and competition results can be added here whenever you are ready.</p>
+        <div class="certificate-grid" id="featuredAchievements">
+          <article class="certificate-card">
+            <img src="achievement-phantom-trinity-x3.png" alt="Certificate for Phantom Trinity X3" />
+            <div><p class="mono-label" data-i18n="certificateLabel">OFFICIAL CERTIFICATE / 06.08.2026</p><h3>Phantom Trinity X3</h3><p data-i18n="trinityAchievement">Recognized by the “35,000 Initiatives” national youth platform for the Phantom Trinity X3 initiative.</p></div>
+          </article>
+          <article class="certificate-card">
+            <img src="achievement-phantom-block.png" alt="Certificate for Phantom Block" />
+            <div><p class="mono-label" data-i18n="certificateLabel">OFFICIAL CERTIFICATE / 06.08.2026</p><h3>Phantom Block</h3><p data-i18n="blockAchievement">Recognized by the “35,000 Initiatives” national youth platform for the Phantom Block initiative.</p></div>
+          </article>
+        </div>
+        <div id="customAchievements"></div>
       </div>
     </section>
 
