@@ -1,75 +1,42 @@
-# Phantom Portfolio — Valijonov Valijon
+# Phantom Portfolio
 
-Personal portfolio website for Valijonov Valijon (Phantom) — Software Engineer, Ethical Cybersecurity Specialist, and Scientific Innovator based in Tashkent, Uzbekistan.
+A black-and-white portfolio for Valijonov Valijon (Phantom). It is a static website with a secure Supabase-backed editor, so projects and achievements can be added one at a time after it is online. The top-right controls let visitors switch between English, Russian, and Uzbek, plus daylight and night modes; their choice is remembered in the browser.
 
-**Live site:** `https://<your-github-username>.github.io/<repo-name>/`
+## Preview locally
 
----
+Open `index.html` in a browser. For best results, serve this folder with a local web server.
 
-## File structure
+## Connect the online editor (required before publishing)
 
-```
-phantom-portfolio/
-├── index.html                      ← Main page
-├── styles-v2.css                   ← All styles
-├── portfolio-v2.js                 ← Animations & interactions
-├── app.js                          ← Supabase auth & CMS logic
-├── phantom-car-concept.jpg         ← Research images (web-optimized)
-├── phantom-block-concept.jpg
-├── phantom-wind-concept.jpg
-├── achievement-phantom-trinity-x3.jpg
-└── achievement-phantom-block.jpg
-```
+1. Create a free project at [Supabase](https://supabase.com/).
+2. In **SQL Editor**, run the full contents of `supabase.sql`.
+3. In **Authentication > Users**, create an email/password user for `detshotcley@gmail.com`. Do not share that password.
+4. In **Project Settings > API**, copy the project URL and the **anon public** key.
+5. Paste those two values into `SUPABASE_URL` and `SUPABASE_ANON_KEY` at the top of `app.js`.
+6. Deploy the folder to Netlify, Vercel, or GitHub Pages. The site works on any static host.
+7. In **Authentication > URL Configuration**, set both **Site URL** and an allowed **Redirect URL** to `https://detshotcley-creator.github.io/valijon-portfolio/`. This makes password recovery and the secure email sign-in link return to the portfolio instead of `localhost`.
 
-## Deploy to GitHub Pages
+The public anon key is intended to be visible in browser code. The protection comes from the Row Level Security rules in `supabase.sql`, which only let `detshotcley@gmail.com` add or change portfolio entries.
 
-### First time setup
+## Using the editor
 
-```bash
-git init
-git add .
-git commit -m "Initial portfolio deploy"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git push -u origin main
-```
+After deployment, press **Manage portfolio** (or **Add a project**) and sign in with your Supabase email and password. If a password has not yet been created, enter `detshotcley@gmail.com` and choose **Send a secure sign-in link**. Fill in the small form to publish a project or achievement. Visitors will see it right away.
 
-Then in GitHub:
-1. Go to your repo → **Settings** → **Pages**
-2. Source: **Deploy from a branch**
-3. Branch: **main** / **(root)**
-4. Click **Save**
+## Publish this finished update on GitHub Pages
 
-Your site will be live at `https://<your-username>.github.io/<repo-name>/` in ~1 minute.
+1. Extract the final ZIP package.
+2. Open `https://github.com/detshotcley-creator/valijon-portfolio` and select **Add file → Upload files**.
+3. Select **every item inside** the extracted `phantom-portfolio` folder — do not upload the ZIP itself and do not upload the outer folder.
+4. Let GitHub replace files with the same names, then choose **Commit changes**.
+5. Wait about 1–2 minutes, then open `https://detshotcley-creator.github.io/valijon-portfolio/` and refresh the page with `Ctrl + F5`.
 
-### Updating the site
+The update includes the certificates, the Dostoyevsky reflection window with five quotes and its local background image, mobile quick-action buttons, language and theme switching, and the Supabase editor fixes.
 
-```bash
-git add .
-git commit -m "Update portfolio"
-git push
-```
+## Files
 
-GitHub Pages auto-deploys on every push to `main`.
-
----
-
-## Supabase (optional — for admin panel)
-
-The project/achievement management panel uses Supabase. The credentials in `app.js` are safe to expose publicly as long as **Row Level Security (RLS)** is enabled on your Supabase project (see `supabase.sql`).
-
-If you want to reset or change credentials, edit these lines in `app.js`:
-
-```js
-const SUPABASE_URL  = "https://your-project.supabase.co";
-const SUPABASE_ANON_KEY = "your-anon-key";
-const OWNER_EMAIL   = "your@email.com";
-```
-
----
-
-## Tech stack
-
-- Vanilla HTML / CSS / JS — no build tools, no dependencies
-- [Syne](https://fonts.google.com/specimen/Syne) + [Inter](https://fonts.google.com/specimen/Inter) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) via Google Fonts
-- [Supabase](https://supabase.com) for backend (optional)
+- `index.html` — content and layout
+- `styles.css` — responsive visual design
+- `app.js` — online entry editor and database connection
+- `supabase.sql` — protected table and access rules
+- `dostoevsky-reflections-bg.png` — local background image for the reflections window
+- `achievement-*.png` and `phantom-*-concept.png` — certificate and project visuals

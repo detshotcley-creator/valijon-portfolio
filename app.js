@@ -8,7 +8,7 @@ const OWNER_EMAIL = "detshotcley@gmail.com";
 
 const translations = {
   en: {
-    navAbout: "About", navProjects: "Projects", navContact: "Contact", managePortfolio: "Manage portfolio <span aria-hidden=\"true\">↗</span>", available: "Available for meaningful work",
+    navAbout: "About", navThoughts: "Thoughts", navProjects: "Projects", navContact: "Contact", managePortfolio: "Manage portfolio <span aria-hidden=\"true\">↗</span>", available: "Available for meaningful work",
     heroTitle: "Building with<br /><em>depth.</em>", heroCopy: "Software engineer, ethical cybersecurity specialist, and scientific innovator pursuing technology that moves the world forward.", exploreWork: "Explore work <span>↓</span>", githubProfile: "GitHub profile <span>↗</span>", basedIn: "BASED IN UZBEKISTAN", softwareEngineering: "SOFTWARE ENGINEERING", focusMode: "FOCUS MODE: ON",
     aboutIndex: "01 / ABOUT", aboutTitle: "A restless mind for <em>real problems.</em>", aboutCopyOne: "I am a high-achieving second-year Software Engineering student at the University of Science and Technology. I work where programming, ethical cybersecurity, and scientific curiosity meet.", aboutCopyTwo: "My long-term mission is simple: create useful technology, solve difficult problems, and help change the world through innovation.",
     toolkitIndex: "02 / TOOLKIT", languagesSystems: "LANGUAGES & SYSTEMS", mindsetIndex: "03 / MINDSET", mindsetQuote: "I choose focused learning over short-form distractions. My aim is to develop exceptional concentration, discipline, and depth of thought.",
@@ -16,12 +16,12 @@ const translations = {
     workIndex: "05 / SELECTED WORK", workTitle: "Projects in<br /><em>progress.</em>", addProject: "Add a project <span>+</span>", nextBuild: "01 / YOUR NEXT BUILD", emptyProjectTitle: "New projects will appear here.", emptyProjectCopy: "Use “Add a project” to publish your work one card at a time.",
     achievementIndex: "06 / ACHIEVEMENTS", addAchievement: "Add achievement <span>+</span>", emptyAchievements: "Your certificates, awards, and competition results can be added here whenever you are ready.", certificateLabel: "OFFICIAL CERTIFICATE / 06.08.2026", trinityAchievement: "Recognized by the “35,000 Initiatives” national youth platform for the Phantom Trinity X3 initiative.", blockAchievement: "Recognized by the “35,000 Initiatives” national youth platform for the Phantom Block initiative.",
     contactIndex: "07 / CONTACT", contactTitle: "Let’s build something<br /><em>that matters.</em>", contactCopy: "For collaborations, research, and ambitious ideas — get in touch.", footer: "DESIGNED FOR FOCUS.",
-    privateAccess: "PRIVATE ACCESS", modalTitle: "Manage your <em>portfolio.</em>", modalCopy: "Sign in with your owner account to add projects and achievements. The public site stays view-only.", emailLabel: "Email", passwordLabel: "Password", signIn: "Sign in <span>→</span>", ownerAccess: "OWNER ACCESS", editorTitle: "Add an <em>entry.</em>", signOut: "Sign out", entryType: "Entry type", project: "Project", achievement: "Achievement", titleLabel: "Title", titlePlaceholder: "e.g. Network Security Scanner", descriptionLabel: "Description", descriptionPlaceholder: "What did you build or achieve?", technologiesLabel: "Technologies", optionalComma: "(optional, separate with commas)", projectLink: "Project link", optional: "(optional)", publishEntry: "Publish entry <span>→</span>",
+    thoughtsKicker: "A QUIET ROOM FOR THOUGHT", thoughtsTitle: "Dostoyevsky<br /><em>reflections.</em>", thoughtsNote: "Selected reflections in Uzbek", privateAccess: "PRIVATE ACCESS", modalTitle: "Manage your <em>portfolio.</em>", modalCopy: "Sign in with your owner account to add projects and achievements. The public site stays view-only.", emailLabel: "Email", passwordLabel: "Password", signIn: "Sign in <span>→</span>", or: "or", sendMagicLink: "Send a secure sign-in link", magicLinkHelp: "A one-time link will be sent to your owner email.", ownerAccess: "OWNER ACCESS", editorTitle: "Add an <em>entry.</em>", signOut: "Sign out", entryType: "Entry type", project: "Project", achievement: "Achievement", titleLabel: "Title", titlePlaceholder: "e.g. Network Security Scanner", descriptionLabel: "Description", descriptionPlaceholder: "What did you build or achieve?", technologiesLabel: "Technologies", optionalComma: "(optional, separate with commas)", projectLink: "Project link", optional: "(optional)", publishEntry: "Publish entry <span>→</span>",
     recoveryAccess: "PASSWORD RECOVERY", recoveryTitle: "Create a new <em>password.</em>", recoveryCopy: "Choose a new password for your private portfolio editor.", newPassword: "New password", confirmPassword: "Confirm password", savePassword: "Save password <span>→</span>", passwordsMismatch: "The passwords do not match.", passwordSaved: "Password saved. You can now sign in.",
-    connectSupabase: "Connect Supabase in app.js before using the online editor.", notAuthorized: "This account is not authorized to manage this portfolio.", signedOut: "Signed out.", signingIn: "Signing in…", signedIn: "Signed in.", publishing: "Publishing…", published: "Published successfully.", validLink: "Please use a valid http or https link.", nightMode: "Switch to night mode", dayMode: "Switch to day mode"
+    connectSupabase: "Connect Supabase in app.js before using the online editor.", notAuthorized: "This account is not authorized to manage this portfolio.", signedOut: "Signed out.", signingIn: "Signing in…", signedIn: "Signed in.", sendingMagicLink: "Sending your secure link…", magicLinkSent: "Check your inbox for the one-time sign-in link.", publishing: "Publishing…", published: "Published successfully.", validLink: "Please use a valid http or https link.", nightMode: "Switch to night mode", dayMode: "Switch to day mode"
   },
   ru: {
-    navAbout: "Обо мне", navProjects: "Проекты", navContact: "Контакты", managePortfolio: "Управление портфолио <span aria-hidden=\"true\">↗</span>", available: "Открыт для значимой работы",
+    navAbout: "Обо мне", navThoughts: "Мысли", navProjects: "Проекты", navContact: "Контакты", managePortfolio: "Управление портфолио <span aria-hidden=\"true\">↗</span>", available: "Открыт для значимой работы",
     heroTitle: "Создаю с<br /><em>глубиной.</em>", heroCopy: "Инженер-программист, специалист по этической кибербезопасности и научный новатор, создающий технологии, которые двигают мир вперёд.", exploreWork: "Смотреть работы <span>↓</span>", githubProfile: "Профиль GitHub <span>↗</span>", basedIn: "УЗБЕКИСТАН", softwareEngineering: "ПРОГРАММНАЯ ИНЖЕНЕРИЯ", focusMode: "РЕЖИМ ФОКУСА: ВКЛ.",
     aboutIndex: "01 / ОБО МНЕ", aboutTitle: "Неугомонный ум для <em>реальных задач.</em>", aboutCopyOne: "Я — успешный студент второго курса направления «Программная инженерия» Университета науки и технологий. Я работаю на пересечении программирования, этической кибербезопасности и научного любопытства.", aboutCopyTwo: "Моя долгосрочная цель проста: создавать полезные технологии, решать сложные задачи и менять мир через инновации.",
     toolkitIndex: "02 / ИНСТРУМЕНТЫ", languagesSystems: "ЯЗЫКИ И СИСТЕМЫ", mindsetIndex: "03 / МЫШЛЕНИЕ", mindsetQuote: "Я выбираю глубокое обучение вместо короткого контента. Моя цель — развить исключительную концентрацию, дисциплину и глубину мышления.",
@@ -29,12 +29,12 @@ const translations = {
     workIndex: "05 / ИЗБРАННЫЕ РАБОТЫ", workTitle: "Проекты в<br /><em>развитии.</em>", addProject: "Добавить проект <span>+</span>", nextBuild: "01 / СЛЕДУЮЩАЯ РАЗРАБОТКА", emptyProjectTitle: "Новые проекты появятся здесь.", emptyProjectCopy: "Используйте «Добавить проект», чтобы публиковать работы по одной.",
     achievementIndex: "06 / ДОСТИЖЕНИЯ", addAchievement: "Добавить достижение <span>+</span>", emptyAchievements: "Сертификаты, награды и результаты соревнований можно добавить сюда в любое время.", certificateLabel: "ОФИЦИАЛЬНЫЙ СЕРТИФИКАТ / 06.08.2026", trinityAchievement: "Отмечен национальной молодёжной платформой «35 000 инициатив» за инициативу Phantom Trinity X3.", blockAchievement: "Отмечен национальной молодёжной платформой «35 000 инициатив» за инициативу Phantom Block.",
     contactIndex: "07 / КОНТАКТЫ", contactTitle: "Давайте создадим то,<br /><em>что важно.</em>", contactCopy: "Для сотрудничества, исследований и амбициозных идей — свяжитесь со мной.", footer: "СОЗДАНО ДЛЯ ФОКУСА.",
-    privateAccess: "ЗАКРЫТЫЙ ДОСТУП", modalTitle: "Управляйте своим <em>портфолио.</em>", modalCopy: "Войдите в учётную запись владельца, чтобы добавлять проекты и достижения. Публичный сайт доступен только для просмотра.", emailLabel: "Электронная почта", passwordLabel: "Пароль", signIn: "Войти <span>→</span>", ownerAccess: "ДОСТУП ВЛАДЕЛЬЦА", editorTitle: "Добавить <em>запись.</em>", signOut: "Выйти", entryType: "Тип записи", project: "Проект", achievement: "Достижение", titleLabel: "Название", titlePlaceholder: "например, сканер сетевой безопасности", descriptionLabel: "Описание", descriptionPlaceholder: "Что вы создали или чего достигли?", technologiesLabel: "Технологии", optionalComma: "(необязательно, через запятую)", projectLink: "Ссылка на проект", optional: "(необязательно)", publishEntry: "Опубликовать <span>→</span>",
+    thoughtsKicker: "ТИХАЯ КОМНАТА ДЛЯ МЫСЛЕЙ", thoughtsTitle: "Размышления<br /><em>Достоевского.</em>", thoughtsNote: "Избранные размышления", privateAccess: "ЗАКРЫТЫЙ ДОСТУП", modalTitle: "Управляйте своим <em>портфолио.</em>", modalCopy: "Войдите в учётную запись владельца, чтобы добавлять проекты и достижения. Публичный сайт доступен только для просмотра.", emailLabel: "Электронная почта", passwordLabel: "Пароль", signIn: "Войти <span>→</span>", or: "или", sendMagicLink: "Отправить безопасную ссылку", magicLinkHelp: "Одноразовая ссылка будет отправлена на email владельца.", ownerAccess: "ДОСТУП ВЛАДЕЛЬЦА", editorTitle: "Добавить <em>запись.</em>", signOut: "Выйти", entryType: "Тип записи", project: "Проект", achievement: "Достижение", titleLabel: "Название", titlePlaceholder: "например, сканер сетевой безопасности", descriptionLabel: "Описание", descriptionPlaceholder: "Что вы создали или чего достигли?", technologiesLabel: "Технологии", optionalComma: "(необязательно, через запятую)", projectLink: "Ссылка на проект", optional: "(необязательно)", publishEntry: "Опубликовать <span>→</span>",
     recoveryAccess: "ВОССТАНОВЛЕНИЕ ПАРОЛЯ", recoveryTitle: "Создайте новый <em>пароль.</em>", recoveryCopy: "Придумайте новый пароль для закрытого редактора портфолио.", newPassword: "Новый пароль", confirmPassword: "Подтвердите пароль", savePassword: "Сохранить пароль <span>→</span>", passwordsMismatch: "Пароли не совпадают.", passwordSaved: "Пароль сохранён. Теперь можно войти.",
-    connectSupabase: "Подключите Supabase в app.js, чтобы использовать онлайн-редактор.", notAuthorized: "Эта учётная запись не имеет прав на управление портфолио.", signedOut: "Вы вышли из учётной записи.", signingIn: "Выполняется вход…", signedIn: "Вход выполнен.", publishing: "Публикация…", published: "Успешно опубликовано.", validLink: "Укажите корректную ссылку http или https.", nightMode: "Включить ночной режим", dayMode: "Включить дневной режим"
+    connectSupabase: "Подключите Supabase в app.js, чтобы использовать онлайн-редактор.", notAuthorized: "Эта учётная запись не имеет прав на управление портфолио.", signedOut: "Вы вышли из учётной записи.", signingIn: "Выполняется вход…", signedIn: "Вход выполнен.", sendingMagicLink: "Отправляется безопасная ссылка…", magicLinkSent: "Проверьте почту: туда отправлена одноразовая ссылка для входа.", publishing: "Публикация…", published: "Успешно опубликовано.", validLink: "Укажите корректную ссылку http или https.", nightMode: "Включить ночной режим", dayMode: "Включить дневной режим"
   },
   uz: {
-    navAbout: "Men haqimda", navProjects: "Loyihalar", navContact: "Aloqa", managePortfolio: "Portfolioni boshqarish <span aria-hidden=\"true\">↗</span>", available: "Muhim ishlarga ochiqman",
+    navAbout: "Men haqimda", navThoughts: "Iqtiboslar", navProjects: "Loyihalar", navContact: "Aloqa", managePortfolio: "Portfolioni boshqarish <span aria-hidden=\"true\">↗</span>", available: "Muhim ishlarga ochiqman",
     heroTitle: "Chuqur<br /><em>fikrlab yarataman.</em>", heroCopy: "Dasturiy injener, etik kiberxavfsizlik mutaxassisi va dunyoni oldinga siljituvchi texnologiyalar ustida ishlaydigan ilmiy novator.", exploreWork: "Ishlarni ko‘rish <span>↓</span>", githubProfile: "GitHub profili <span>↗</span>", basedIn: "O‘ZBEKISTON", softwareEngineering: "DASTURIY INJENERIYA", focusMode: "DIQQAT REJIMI: YOQILGAN",
     aboutIndex: "01 / MEN HAQIMDA", aboutTitle: "Haqiqiy muammolar uchun <em>izlanuvchan ong.</em>", aboutCopyOne: "Men Fan va Texnologiyalar Universitetining Dasturiy injeneriya yo‘nalishida tahsil olayotgan iqtidorli ikkinchi kurs talabasiman. Dasturlash, etik kiberxavfsizlik va ilmiy qiziqish kesishgan nuqtada ishlayman.", aboutCopyTwo: "Uzoq muddatli maqsadim oddiy: foydali texnologiyalar yaratish, murakkab muammolarni hal qilish va innovatsiyalar orqali dunyoni o‘zgartirish.",
     toolkitIndex: "02 / VOSITALAR", languagesSystems: "TILLAR VA TIZIMLAR", mindsetIndex: "03 / DUNYOQARASH", mindsetQuote: "Men qisqa videolardagi chalg‘itishlar o‘rniga chuqur o‘rganishni tanlayman. Maqsadim — juda kuchli diqqat, intizom va teran fikrlashni rivojlantirish.",
@@ -42,9 +42,9 @@ const translations = {
     workIndex: "05 / TANLANGAN ISHLAR", workTitle: "Rivojlanishdagi<br /><em>loyihalar.</em>", addProject: "Loyiha qo‘shish <span>+</span>", nextBuild: "01 / KEYINGI LOYIHANGIZ", emptyProjectTitle: "Yangi loyihalar shu yerda paydo bo‘ladi.", emptyProjectCopy: "Ishlaringizni bittadan nashr qilish uchun «Loyiha qo‘shish» tugmasidan foydalaning.",
     achievementIndex: "06 / YUTUQLAR", addAchievement: "Yutuq qo‘shish <span>+</span>", emptyAchievements: "Sertifikatlar, mukofotlar va tanlov natijalarini tayyor bo‘lganingizda shu yerga qo‘shishingiz mumkin.", certificateLabel: "RASMIY SERTIFIKAT / 06.08.2026", trinityAchievement: "“35 000 tashabbus” milliy yoshlar platformasi tomonidan Phantom Trinity X3 tashabbusi uchun e’tirof etilgan.", blockAchievement: "“35 000 tashabbus” milliy yoshlar platformasi tomonidan Phantom Block tashabbusi uchun e’tirof etilgan.",
     contactIndex: "07 / ALOQA", contactTitle: "Keling, muhim<br /><em>narsa yarataylik.</em>", contactCopy: "Hamkorlik, tadqiqotlar va katta g‘oyalar uchun — men bilan bog‘laning.", footer: "DIQQAT UCHUN YARATILGAN.",
-    privateAccess: "YOPIQ KIRISH", modalTitle: "Portfoliongizni <em>boshqaring.</em>", modalCopy: "Loyihalar va yutuqlar qo‘shish uchun egasi akkaunti bilan kiring. Ommaviy sayt faqat ko‘rish uchun ochiq.", emailLabel: "Email", passwordLabel: "Parol", signIn: "Kirish <span>→</span>", ownerAccess: "EGA KIRISHI", editorTitle: "Yangi <em>yozuv qo‘shish.</em>", signOut: "Chiqish", entryType: "Yozuv turi", project: "Loyiha", achievement: "Yutuq", titleLabel: "Nomi", titlePlaceholder: "masalan, tarmoq xavfsizligi skaneri", descriptionLabel: "Tavsifi", descriptionPlaceholder: "Nima yaratdingiz yoki nimaga erishdingiz?", technologiesLabel: "Texnologiyalar", optionalComma: "(ixtiyoriy, vergul bilan ajrating)", projectLink: "Loyiha havolasi", optional: "(ixtiyoriy)", publishEntry: "Nashr qilish <span>→</span>",
+    thoughtsKicker: "FIKRLAR UCHUN SUKUNAT XONASI", thoughtsTitle: "Dostoyevskiy<br /><em>mulohazalari.</em>", thoughtsNote: "O‘zbekcha tanlangan mulohazalar", privateAccess: "YOPIQ KIRISH", modalTitle: "Portfoliongizni <em>boshqaring.</em>", modalCopy: "Loyihalar va yutuqlar qo‘shish uchun egasi akkaunti bilan kiring. Ommaviy sayt faqat ko‘rish uchun ochiq.", emailLabel: "Email", passwordLabel: "Parol", signIn: "Kirish <span>→</span>", or: "yoki", sendMagicLink: "Xavfsiz kirish havolasini yuborish", magicLinkHelp: "Bir martalik havola egasi emailiga yuboriladi.", ownerAccess: "EGA KIRISHI", editorTitle: "Yangi <em>yozuv qo‘shish.</em>", signOut: "Chiqish", entryType: "Yozuv turi", project: "Loyiha", achievement: "Yutuq", titleLabel: "Nomi", titlePlaceholder: "masalan, tarmoq xavfsizligi skaneri", descriptionLabel: "Tavsifi", descriptionPlaceholder: "Nima yaratdingiz yoki nimaga erishdingiz?", technologiesLabel: "Texnologiyalar", optionalComma: "(ixtiyoriy, vergul bilan ajrating)", projectLink: "Loyiha havolasi", optional: "(ixtiyoriy)", publishEntry: "Nashr qilish <span>→</span>",
     recoveryAccess: "PAROLNI TIKLASH", recoveryTitle: "Yangi <em>parol yarating.</em>", recoveryCopy: "Yopiq portfolio tahrirlovchisi uchun yangi parol tanlang.", newPassword: "Yangi parol", confirmPassword: "Parolni tasdiqlang", savePassword: "Parolni saqlash <span>→</span>", passwordsMismatch: "Parollar bir xil emas.", passwordSaved: "Parol saqlandi. Endi tizimga kirishingiz mumkin.",
-    connectSupabase: "Onlayn tahrirlovchidan foydalanish uchun app.js ichida Supabase-ni ulang.", notAuthorized: "Bu akkaunt portfolioni boshqarishga ruxsatga ega emas.", signedOut: "Akkauntdan chiqdingiz.", signingIn: "Kirish amalga oshirilmoqda…", signedIn: "Muvaffaqiyatli kirdingiz.", publishing: "Nashr qilinmoqda…", published: "Muvaffaqiyatli nashr qilindi.", validLink: "To‘g‘ri http yoki https havolasini kiriting.", nightMode: "Tungi rejimga o‘tish", dayMode: "Kunduzgi rejimga o‘tish"
+    connectSupabase: "Onlayn tahrirlovchidan foydalanish uchun app.js ichida Supabase-ni ulang.", notAuthorized: "Bu akkaunt portfolioni boshqarishga ruxsatga ega emas.", signedOut: "Akkauntdan chiqdingiz.", signingIn: "Kirish amalga oshirilmoqda…", signedIn: "Muvaffaqiyatli kirdingiz.", sendingMagicLink: "Xavfsiz havola yuborilmoqda…", magicLinkSent: "Emailingizni tekshiring: bir martalik kirish havolasi yuborildi.", publishing: "Nashr qilinmoqda…", published: "Muvaffaqiyatli nashr qilindi.", validLink: "To‘g‘ri http yoki https havolasini kiriting.", nightMode: "Tungi rejimga o‘tish", dayMode: "Kunduzgi rejimga o‘tish"
   }
 };
 let activeLanguage = localStorage.getItem("phantom-language") || "en";
@@ -52,9 +52,35 @@ let activeTheme = localStorage.getItem("phantom-theme") || "light";
 
 const $ = (selector) => document.querySelector(selector);
 const modal = $("#adminModal");
+const thoughtsModal = $("#thoughtsModal");
 const projectsGrid = $("#projectsGrid");
 const achievementsList = $("#achievementsList");
 let client = null;
+let activeThought = 0;
+
+const dostoevskyThoughts = {
+  uz: [
+    "Hammangizni tashlab ketmoqchi edim, ammo hech kim yo‘q ekan.",
+    "Qanday odam ekanligim haqida to‘xtalsak, o‘zimni shunday ifodalagan bo‘lardim: men baxtliman, ammo nimadandir norozi.",
+    "Dunyoni faqat go‘zallik va baxt qutqara oladi.",
+    "Aql tomonidan sharmandalik deb topilgan narsa qalb uchun butunlay go‘zal tuyuladi.",
+    "Yana shuni aytishim mumkinki, agar meni yaxshi ko‘rganingizda, bilasizmi nima bo‘lardi? Yaxshi bo‘lardi-da."
+  ],
+  en: [
+    "I wanted to leave everyone behind, yet there was no one to leave behind.",
+    "If I were to describe myself, I would say this: I am happy, yet somehow dissatisfied.",
+    "Only beauty and happiness can save the world.",
+    "What reason calls shameful can seem entirely beautiful to the heart.",
+    "And if you had loved me, do you know what would have happened? It would have been good."
+  ],
+  ru: [
+    "Я хотел оставить всех, но оказалось, что оставлять некого.",
+    "Если бы мне пришлось описать себя, я бы сказал так: я счастлив, но чем-то недоволен.",
+    "Только красота и счастье могут спасти мир.",
+    "То, что разум называет постыдным, сердцу может казаться совершенно прекрасным.",
+    "И если бы вы меня любили, знаете, что было бы? Было бы хорошо."
+  ]
+};
 
 function t(key) { return translations[activeLanguage]?.[key] || translations.en[key] || key; }
 function applyLanguage(language) {
@@ -64,8 +90,10 @@ function applyLanguage(language) {
   document.querySelectorAll("[data-i18n-html]").forEach((element) => { element.innerHTML = t(element.dataset.i18nHtml); });
   document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => { element.placeholder = t(element.dataset.i18nPlaceholder); });
   document.querySelectorAll("[data-language]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.language === activeLanguage)));
+  $("#mobileAdminTrigger")?.setAttribute("aria-label", t("managePortfolio").replace(/<[^>]*>/g, ""));
   document.title = `Phantom — Valijonov Valijon`;
   localStorage.setItem("phantom-language", activeLanguage);
+  renderThought();
   if (configured()) loadEntries();
 }
 function applyTheme(theme) {
@@ -75,10 +103,26 @@ function applyTheme(theme) {
   $("#themeToggle").setAttribute("aria-label", t(activeTheme === "dark" ? "dayMode" : "nightMode"));
   localStorage.setItem("phantom-theme", activeTheme);
 }
-function configured() { return SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase; }
+function configured() { return Boolean(client); }
+function supabaseAvailable() { return Boolean(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase); }
 function message(text, error = false) { const el = $("#formMessage"); el.textContent = text; el.classList.toggle("error", error); }
 function escapeHTML(value = "") { const el = document.createElement("div"); el.textContent = value; return el.innerHTML; }
 function safeUrl(url) { try { const parsed = new URL(url); return ["http:", "https:"].includes(parsed.protocol) ? parsed.href : ""; } catch { return ""; } }
+
+function renderThought() {
+  const thoughts = dostoevskyThoughts[activeLanguage] || dostoevskyThoughts.uz;
+  const quote = thoughts[activeThought];
+  $("#dostoevskyQuote").textContent = quote;
+  $("#dostoevskyAttribution").textContent = "— Fyodor Dostoyevsky · Selected reflection";
+  $("#thoughtsCount").textContent = `${String(activeThought + 1).padStart(2, "0")} / ${String(thoughts.length).padStart(2, "0")}`;
+  $("#thoughtsDots").innerHTML = thoughts.map((_, index) => `<button type="button" aria-label="Reflection ${index + 1}" aria-current="${index === activeThought}"></button>`).join("");
+  $("#thoughtsDots").querySelectorAll("button").forEach((button, index) => button.addEventListener("click", () => { activeThought = index; renderThought(); }));
+}
+
+function openThoughts() {
+  renderThought();
+  thoughtsModal.showModal();
+}
 
 function openEditor(type = "project") {
   $("#entryType").value = type;
@@ -123,8 +167,14 @@ async function loadEntries() {
 }
 
 $("#adminTrigger").addEventListener("click", () => openEditor());
+$("#mobileAdminTrigger").addEventListener("click", () => openEditor());
 $("#addProjectTrigger").addEventListener("click", () => openEditor("project"));
 $("#addAchievementTrigger").addEventListener("click", () => openEditor("achievement"));
+$("#thoughtsTrigger").addEventListener("click", openThoughts);
+$("#mobileThoughtsTrigger").addEventListener("click", openThoughts);
+$("#closeThoughts").addEventListener("click", () => thoughtsModal.close());
+$("#previousThought").addEventListener("click", () => { activeThought = (activeThought + dostoevskyThoughts[activeLanguage].length - 1) % dostoevskyThoughts[activeLanguage].length; renderThought(); });
+$("#nextThought").addEventListener("click", () => { activeThought = (activeThought + 1) % dostoevskyThoughts[activeLanguage].length; renderThought(); });
 document.querySelectorAll("[data-language]").forEach((button) => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
 $("#themeToggle").addEventListener("click", () => applyTheme(activeTheme === "dark" ? "light" : "dark"));
 $("#closeModal").addEventListener("click", closeEditor);
@@ -137,6 +187,17 @@ $("#loginForm").addEventListener("submit", async (event) => {
   const { error } = await client.auth.signInWithPassword({ email: $("#loginEmail").value.trim(), password: $("#loginPassword").value });
   if (error) return message(error.message, true);
   await checkSession(); message(t("signedIn"));
+});
+
+$("#magicLinkButton").addEventListener("click", async () => {
+  if (!configured()) return;
+  const email = $("#loginEmail").value.trim().toLowerCase() || OWNER_EMAIL;
+  if (email !== OWNER_EMAIL.toLowerCase()) return message(t("notAuthorized"), true);
+  message(t("sendingMagicLink"));
+  const redirectTo = `${window.location.origin}${window.location.pathname}`;
+  const { error } = await client.auth.signInWithOtp({ email, options: { emailRedirectTo: redirectTo, shouldCreateUser: false } });
+  if (error) return message(error.message, true);
+  message(t("magicLinkSent"));
 });
 
 $("#entryForm").addEventListener("submit", async (event) => {
@@ -165,7 +226,7 @@ $("#recoveryForm").addEventListener("submit", async (event) => {
 $("#year").textContent = new Date().getFullYear();
 applyLanguage(activeLanguage);
 applyTheme(activeTheme);
-if (configured()) {
+if (supabaseAvailable()) {
   client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   client.auth.onAuthStateChange((event) => {
     if (event === "PASSWORD_RECOVERY") {

@@ -3,404 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Valijonov Valijon — Phantom. Software engineer, ethical cybersecurity specialist, and scientific innovator from Uzbekistan." />
+  <meta name="description" content="Portfolio of Valijonov Valijon — Phantom, software engineer and ethical cybersecurity specialist." />
   <title>Phantom — Valijonov Valijon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles-v2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-theme="dark">
-
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- Noise overlay -->
-  <div class="noise" aria-hidden="true"></div>
-
-  <!-- ─── NAVIGATION ─── -->
-  <header class="nav" id="nav">
-    <a class="nav-logo" href="#top" aria-label="Phantom home">
-      <span class="nav-logo-mark">P</span>
-      <span class="nav-logo-text">PHANTOM</span>
-    </a>
-    <nav class="nav-links" aria-label="Main navigation">
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Phantom home"><span class="brand-mark">P</span><span>PHANTOM</span></a>
+    <nav aria-label="Main navigation">
       <a href="#about" data-i18n="navAbout">About</a>
-      <a href="#research" data-i18n="navResearch">Research</a>
+      <button class="nav-thoughts" id="thoughtsTrigger" type="button" data-i18n="navThoughts">Thoughts</button>
       <a href="#projects" data-i18n="navProjects">Projects</a>
       <a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
-    <div class="nav-controls">
-      <div class="lang-switch" role="group" aria-label="Language">
+    <div class="header-controls">
+      <div class="language-switcher" role="group" aria-label="Choose language">
         <button type="button" data-language="en" aria-pressed="true">EN</button>
         <button type="button" data-language="ru" aria-pressed="false">RU</button>
         <button type="button" data-language="uz" aria-pressed="false">UZ</button>
       </div>
-      <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle theme">
-        <span class="theme-icon" aria-hidden="true">◐</span>
-      </button>
-      <button class="admin-btn" id="adminTrigger" type="button">
-        <span data-i18n-html="managePortfolio">Manage <span>↗</span></span>
-      </button>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to night mode"><span aria-hidden="true">☾</span></button>
+      <button class="admin-trigger" id="adminTrigger" type="button" data-i18n-html="managePortfolio">Manage portfolio <span aria-hidden="true">↗</span></button>
     </div>
   </header>
+  <div class="mobile-quick-actions" aria-label="Quick actions">
+    <button id="mobileThoughtsTrigger" type="button" data-i18n="navThoughts">Thoughts</button>
+    <button id="mobileAdminTrigger" type="button" aria-label="Manage portfolio">↗</button>
+  </div>
 
   <main id="top">
-
-    <!-- ─── HERO ─── -->
-    <section class="hero" id="hero">
-      <div class="hero-bg">
-        <div class="hero-orb orb-1"></div>
-        <div class="hero-orb orb-2"></div>
-        <div class="hero-grid"></div>
-      </div>
-
-      <div class="hero-content">
-        <div class="hero-eyebrow reveal-line">
-          <span class="pulse-dot"></span>
-          <span data-i18n="available">Available for meaningful work</span>
-          <span class="hero-tag">UZBEKISTAN · 2026</span>
+    <section class="hero section-shell">
+      <p class="eyebrow"><span class="pulse"></span><span data-i18n="available">Available for meaningful work</span></p>
+      <div class="hero-layout">
+        <div>
+          <p class="mono-label">VALIJONOV VALIJON / 02</p>
+          <h1 data-i18n-html="heroTitle">Building with<br /><em>depth.</em></h1>
+          <p class="hero-copy" data-i18n="heroCopy">Software engineer, ethical cybersecurity specialist, and scientific innovator pursuing technology that moves the world forward.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects" data-i18n-html="exploreWork">Explore work <span>↓</span></a>
+            <a class="text-link" href="https://github.com/detshotcley-creator" target="_blank" rel="noopener noreferrer" data-i18n-html="githubProfile">GitHub profile <span>↗</span></a>
+          </div>
         </div>
-
-        <h1 class="hero-title">
-          <span class="hero-line reveal-word" data-delay="0">Engineering</span>
-          <span class="hero-line reveal-word italic-serif" data-delay="100">the future</span>
-          <span class="hero-line reveal-word" data-delay="200">from scratch.</span>
-        </h1>
-
-        <p class="hero-sub reveal-fade" data-delay="400" data-i18n="heroCopy">
-          Software engineer, ethical cybersecurity specialist, and scientific innovator pursuing technology that moves the world forward.
-        </p>
-
-        <div class="hero-actions reveal-fade" data-delay="550">
-          <a class="btn-primary magnetic" href="#research">
-            <span data-i18n="exploreWork">Explore work</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn-ghost magnetic" href="https://github.com/detshotcley-creator" target="_blank" rel="noopener">
-            GitHub <span>↗</span>
-          </a>
+        <div class="monogram-wrap" aria-label="Phantom monogram">
+          <div class="monogram-ring ring-one"></div>
+          <div class="monogram-ring ring-two"></div>
+          <div class="monogram">P</div>
+          <p class="orbit-label orbit-top">ETHICAL SECURITY</p>
+          <p class="orbit-label orbit-bottom">PHANTOM / 2026</p>
         </div>
       </div>
+      <div class="hero-status"><span data-i18n="basedIn">BASED IN UZBEKISTAN</span><span data-i18n="softwareEngineering">SOFTWARE ENGINEERING</span><span data-i18n="focusMode">FOCUS MODE: ON</span></div>
+    </section>
 
-      <div class="hero-monogram reveal-fade" data-delay="200" aria-hidden="true">
-        <div class="mono-rings">
-          <svg class="ring-svg" viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="180" stroke-dasharray="6 10" class="ring-dashed"/>
-            <circle cx="200" cy="200" r="140" stroke-dasharray="2 8" class="ring-dotted"/>
-            <circle cx="200" cy="200" r="100" class="ring-solid"/>
-          </svg>
-        </div>
-        <div class="mono-center">P</div>
-        <div class="mono-label-top">ETHICAL SECURITY</div>
-        <div class="mono-label-bottom">PHANTOM / 2026</div>
-      </div>
-
-      <div class="hero-scroll-hint reveal-fade" data-delay="700">
-        <div class="scroll-line"></div>
-        <span>Scroll</span>
+    <section class="section-shell intro-grid" id="about">
+      <p class="section-index" data-i18n="aboutIndex">01 / ABOUT</p>
+      <div class="intro-content">
+        <h2 data-i18n-html="aboutTitle">A restless mind for <em>real problems.</em></h2>
+        <p data-i18n="aboutCopyOne">I am a high-achieving second-year Software Engineering student at the University of Science and Technology. I work where programming, ethical cybersecurity, and scientific curiosity meet.</p>
+        <p data-i18n="aboutCopyTwo">My long-term mission is simple: create useful technology, solve difficult problems, and help change the world through innovation.</p>
       </div>
     </section>
 
-    <!-- ─── ABOUT / STATS ─── -->
-    <section class="about section" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-left">
-            <p class="section-label scroll-reveal" data-i18n="aboutIndex">01 — About</p>
-            <h2 class="section-title scroll-reveal" data-i18n-html="aboutTitle">
-              A restless mind<br/>for <em>real problems.</em>
-            </h2>
-            <div class="about-copy scroll-reveal">
-              <p data-i18n="aboutCopyOne">I am a first-year Software Engineering student at the University of Science and Technology in Tashkent. I work where programming, ethical cybersecurity, and scientific curiosity meet.</p>
-              <p data-i18n="aboutCopyTwo">My long-term mission is simple: create useful technology, solve difficult problems, and help change the world through innovation.</p>
-            </div>
-            <div class="about-quote scroll-reveal">
-              <blockquote data-i18n="mindsetQuote">"I choose focused learning over short-form distractions. My aim is to develop exceptional concentration, discipline, and depth of thought."</blockquote>
-              <cite>— Phantom</cite>
-            </div>
-          </div>
-          <div class="about-right">
-            <div class="skills-block scroll-reveal">
-              <p class="skills-label" data-i18n="toolkitIndex">02 — Toolkit</p>
-              <div class="skills-grid">
-                <div class="skill-item" data-skill="Python">Python</div>
-                <div class="skill-item" data-skill="C">C</div>
-                <div class="skill-item" data-skill="C++">C++</div>
-                <div class="skill-item" data-skill="C#">C#</div>
-                <div class="skill-item" data-skill="Java">Java</div>
-                <div class="skill-item" data-skill="HTML">HTML</div>
-                <div class="skill-item" data-skill="CSS">CSS</div>
-                <div class="skill-item" data-skill="Linux">Linux</div>
-              </div>
-            </div>
-            <div class="stats-block scroll-reveal">
-              <div class="stat">
-                <span class="stat-num" data-count="3">0</span>
-                <span class="stat-label" data-i18n="statProjects">Research projects</span>
-              </div>
-              <div class="stat">
-                <span class="stat-num" data-count="2">0</span>
-                <span class="stat-label" data-i18n="statCerts">National certificates</span>
-              </div>
-              <div class="stat">
-                <span class="stat-num" data-count="2026">0</span>
-                <span class="stat-label">Year</span>
-              </div>
-            </div>
-          </div>
+    <section class="section-shell skills-section">
+      <div class="section-heading"><p class="section-index" data-i18n="toolkitIndex">02 / TOOLKIT</p><p class="mono-label" data-i18n="languagesSystems">LANGUAGES &amp; SYSTEMS</p></div>
+      <div class="skill-grid">
+        <span>Python</span><span>C</span><span>C++</span><span>C#</span><span>Java</span><span>HTML</span><span>CSS</span><span>Linux</span>
+      </div>
+    </section>
+
+    <section class="focus-section">
+      <div class="section-shell focus-inner">
+        <p class="section-index" data-i18n="mindsetIndex">03 / MINDSET</p>
+        <div>
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <blockquote data-i18n="mindsetQuote">I choose focused learning over short-form distractions. My aim is to develop exceptional concentration, discipline, and depth of thought.</blockquote>
+          <p class="focus-signature">— Phantom</p>
         </div>
       </div>
     </section>
 
-    <!-- ─── RESEARCH ─── -->
-    <section class="research section" id="research">
-      <div class="container">
-        <div class="section-head scroll-reveal">
-          <p class="section-label" data-i18n="researchIndex">04 — Phantom Research Lab</p>
-          <div class="section-head-inner">
-            <h2 class="section-title" data-i18n-html="researchTitle">Ideas with a <em>future.</em></h2>
-            <p class="section-desc" data-i18n="researchNotice">Concept and research-stage explorations — not presented as working prototypes.</p>
+    <section class="section-shell research-section" id="research">
+      <div class="section-heading research-heading">
+        <div><p class="section-index" data-i18n="researchIndex">04 / PHANTOM RESEARCH LAB</p><h2 data-i18n-html="researchTitle">Ideas with a<br /><em>future.</em></h2></div>
+        <p class="mono-label" data-i18n="researchLabel">CONCEPTS / 2026</p>
+      </div>
+      <p class="research-notice" data-i18n="researchNotice">All three works below are concept and research-stage explorations. They are not presented as working prototypes.</p>
+      <div class="research-grid">
+        <article class="research-card">
+          <figure><img src="phantom-car-concept.png" alt="Phantom Car visual concept" /><figcaption data-i18n="conceptVisual">CONCEPT VISUAL</figcaption></figure>
+          <div class="research-card-copy">
+            <p class="mono-label" data-i18n="carMeta">SUSTAINABLE MOBILITY / RESEARCH STAGE</p>
+            <h3>Phantom Car</h3>
+            <p data-i18n="carDescription">An ecological family electric-car concept designed to reduce dependence on external charging.</p>
+            <p class="research-facts" data-i18n="carFacts">550 W solar roof · regenerative braking · LiFePO4 battery · thermoelectric generation (TEG) · AI energy management</p>
           </div>
-        </div>
-
-        <div class="research-track">
-
-          <!-- Car -->
-          <article class="research-card scroll-reveal" data-index="01">
-            <div class="rcard-visual">
-              <div class="rcard-img-wrap">
-                <img src="phantom-car-concept.jpg" alt="Phantom Car concept" loading="lazy" />
-                <div class="rcard-img-overlay"></div>
-              </div>
-              <div class="rcard-index">01</div>
-            </div>
-            <div class="rcard-body">
-              <p class="rcard-meta" data-i18n="carMeta">Sustainable Mobility — Research Stage</p>
-              <h3 class="rcard-title">Phantom Car</h3>
-              <p class="rcard-desc" data-i18n="carDescription">An ecological family electric-car concept designed to reduce dependence on external charging infrastructure through multiple on-board energy sources.</p>
-              <ul class="rcard-specs">
-                <li>550 W solar roof</li>
-                <li>Regenerative braking</li>
-                <li>LiFePO4 battery</li>
-                <li>Thermoelectric generation (TEG)</li>
-                <li>AI energy management</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Block -->
-          <article class="research-card scroll-reveal" data-index="02">
-            <div class="rcard-visual">
-              <div class="rcard-img-wrap">
-                <img src="phantom-block-concept.jpg" alt="Phantom Block concept" loading="lazy" />
-                <div class="rcard-img-overlay"></div>
-              </div>
-              <div class="rcard-index">02</div>
-            </div>
-            <div class="rcard-body">
-              <p class="rcard-meta" data-i18n="blockMeta">EV Energy System — Research Stage</p>
-              <h3 class="rcard-title">Phantom Block</h3>
-              <p class="rcard-desc" data-i18n="blockDescription">A central energy-management concept for electric vehicles that brings multiple energy sources into one intelligent system.</p>
-              <ul class="rcard-specs">
-                <li>Energy-source integration</li>
-                <li>Real-time monitoring</li>
-                <li>Intelligent distribution</li>
-                <li>System control interface</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Wind -->
-          <article class="research-card scroll-reveal" data-index="03">
-            <div class="rcard-visual">
-              <div class="rcard-img-wrap">
-                <img src="phantom-wind-concept.jpg" alt="Phantom Wind Generator concept" loading="lazy" />
-                <div class="rcard-img-overlay"></div>
-              </div>
-              <div class="rcard-index">03</div>
-            </div>
-            <div class="rcard-body">
-              <p class="rcard-meta" data-i18n="windMeta">Clean Energy — Research &amp; Design Stage</p>
-              <h3 class="rcard-title" data-i18n="windTitle">Phantom Wind Generator</h3>
-              <p class="rcard-desc" data-i18n="windDescription">A vertical-axis wind-turbine concept designed for changing wind directions and urban rooftop installation.</p>
-              <ul class="rcard-specs">
-                <li>Wind-direction flexibility</li>
-                <li>Rooftop installation potential</li>
-                <li>Low-noise objective</li>
-                <li>Modular, serviceable design</li>
-              </ul>
-            </div>
-          </article>
-
-        </div>
+        </article>
+        <article class="research-card">
+          <figure><img src="phantom-block-concept.png" alt="Phantom Block visual concept" /><figcaption data-i18n="conceptVisual">CONCEPT VISUAL</figcaption></figure>
+          <div class="research-card-copy">
+            <p class="mono-label" data-i18n="blockMeta">EV ENERGY SYSTEM / RESEARCH STAGE</p>
+            <h3>Phantom Block</h3>
+            <p data-i18n="blockDescription">A central energy-management concept for electric vehicles that brings multiple energy sources into one intelligent system.</p>
+            <p class="research-facts" data-i18n="blockFacts">Energy-source integration · monitoring · intelligent distribution · system control</p>
+          </div>
+        </article>
+        <article class="research-card">
+          <figure><img src="phantom-wind-concept.png" alt="Phantom Wind Generator visual concept" /><figcaption data-i18n="conceptVisual">CONCEPT VISUAL</figcaption></figure>
+          <div class="research-card-copy">
+            <p class="mono-label" data-i18n="windMeta">CLEAN ENERGY / RESEARCH &amp; DESIGN STAGE</p>
+            <h3 data-i18n="windTitle">Phantom Wind Generator</h3>
+            <p data-i18n="windDescription">A vertical-axis wind-turbine concept designed for changing wind directions and urban installation.</p>
+            <p class="research-facts" data-i18n="windFacts">Wind-direction flexibility · rooftop potential · low-noise objective · serviceable modular design</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- ─── ACHIEVEMENTS ─── -->
-    <section class="achievements section" id="achievements">
-      <div class="container">
-        <div class="section-head scroll-reveal">
-          <p class="section-label" data-i18n="achievementIndex">06 — Achievements</p>
-          <div class="section-head-inner">
-            <h2 class="section-title" data-i18n-html="achievementTitle">Recognized<br/> by <em>the nation.</em></h2>
-            <button class="btn-ghost-sm magnetic" id="addAchievementTrigger" type="button">
-              <span data-i18n-html="addAchievement">Add achievement <span>+</span></span>
-            </button>
-          </div>
-        </div>
+    <section class="section-shell work-section" id="projects">
+      <div class="section-heading work-heading">
+        <div><p class="section-index" data-i18n="workIndex">05 / SELECTED WORK</p><h2 data-i18n-html="workTitle">Projects in<br /><em>progress.</em></h2></div>
+        <button type="button" class="button button-outline" id="addProjectTrigger" data-i18n-html="addProject">Add a project <span>+</span></button>
+      </div>
+      <div class="entry-grid" id="projectsGrid" aria-live="polite">
+        <article class="empty-card"><p class="mono-label" data-i18n="nextBuild">01 / YOUR NEXT BUILD</p><h3 data-i18n="emptyProjectTitle">New projects will appear here.</h3><p data-i18n="emptyProjectCopy">Use “Add a project” to publish your work one card at a time.</p></article>
+      </div>
+    </section>
 
-        <div class="certs-grid scroll-reveal">
-          <article class="cert-card">
-            <div class="cert-img">
-              <img src="achievement-phantom-trinity-x3.jpg" alt="Phantom Trinity X3 certificate" loading="lazy" />
-            </div>
-            <div class="cert-body">
-              <span class="cert-date" data-i18n="certificateLabel">Official Certificate — 06.08.2026</span>
-              <h3 class="cert-name">Phantom Trinity X3</h3>
-              <p class="cert-desc" data-i18n="trinityAchievement">Recognized by the "35,000 Initiatives" national youth platform for the Phantom Trinity X3 initiative.</p>
-            </div>
+    <section class="section-shell achievement-section">
+      <div class="section-heading"><p class="section-index" data-i18n="achievementIndex">06 / ACHIEVEMENTS</p><button class="text-button" id="addAchievementTrigger" type="button" data-i18n-html="addAchievement">Add achievement <span>+</span></button></div>
+      <div class="achievement-list" id="achievementsList" aria-live="polite">
+        <div class="certificate-grid" id="featuredAchievements">
+          <article class="certificate-card">
+            <img src="achievement-phantom-trinity-x3.png" alt="Certificate for Phantom Trinity X3" />
+            <div><p class="mono-label" data-i18n="certificateLabel">OFFICIAL CERTIFICATE / 06.08.2026</p><h3>Phantom Trinity X3</h3><p data-i18n="trinityAchievement">Recognized by the “35,000 Initiatives” national youth platform for the Phantom Trinity X3 initiative.</p></div>
           </article>
-          <article class="cert-card">
-            <div class="cert-img">
-              <img src="achievement-phantom-block.jpg" alt="Phantom Block certificate" loading="lazy" />
-            </div>
-            <div class="cert-body">
-              <span class="cert-date" data-i18n="certificateLabel">Official Certificate — 06.08.2026</span>
-              <h3 class="cert-name">Phantom Block</h3>
-              <p class="cert-desc" data-i18n="blockAchievement">Recognized by the "35,000 Initiatives" national youth platform for the Phantom Block initiative.</p>
-            </div>
+          <article class="certificate-card">
+            <img src="achievement-phantom-block.png" alt="Certificate for Phantom Block" />
+            <div><p class="mono-label" data-i18n="certificateLabel">OFFICIAL CERTIFICATE / 06.08.2026</p><h3>Phantom Block</h3><p data-i18n="blockAchievement">Recognized by the “35,000 Initiatives” national youth platform for the Phantom Block initiative.</p></div>
           </article>
         </div>
-
         <div id="customAchievements"></div>
       </div>
     </section>
 
-    <!-- ─── PROJECTS ─── -->
-    <section class="projects section" id="projects">
-      <div class="container">
-        <div class="section-head scroll-reveal">
-          <p class="section-label" data-i18n="workIndex">05 — Selected Work</p>
-          <div class="section-head-inner">
-            <h2 class="section-title" data-i18n-html="workTitle">Projects in <em>progress.</em></h2>
-            <button class="btn-ghost-sm magnetic" id="addProjectTrigger" type="button">
-              <span data-i18n-html="addProject">Add project <span>+</span></span>
-            </button>
-          </div>
-        </div>
-        <div class="projects-grid scroll-reveal" id="projectsGrid" aria-live="polite">
-          <div class="project-empty">
-            <p class="empty-index" data-i18n="nextBuild">01 / Your next build</p>
-            <h3 data-i18n="emptyProjectTitle">New projects will appear here.</h3>
-            <p data-i18n="emptyProjectCopy">Use "Add project" to publish your work one card at a time.</p>
-          </div>
-        </div>
+    <section class="section-shell contact-section" id="contact">
+      <p class="section-index" data-i18n="contactIndex">07 / CONTACT</p>
+      <div class="contact-content"><h2 data-i18n-html="contactTitle">Let’s build something<br /><em>that matters.</em></h2><p data-i18n="contactCopy">For collaborations, research, and ambitious ideas — get in touch.</p></div>
+      <div class="contact-grid">
+        <a href="mailto:detshotcley@gmail.com"><span class="mono-label">EMAIL</span><strong>detshotcley@gmail.com</strong><span>↗</span></a>
+        <a href="tel:+998997437975"><span class="mono-label">PHONE</span><strong>+998 99 743 79 75</strong><span>↗</span></a>
+        <a href="https://t.me/Elisio_Lucius" target="_blank" rel="noopener noreferrer"><span class="mono-label">TELEGRAM</span><strong>@Elisio_Lucius</strong><span>↗</span></a>
+        <a href="https://www.youtube.com/@Elisio_Lucius" target="_blank" rel="noopener noreferrer"><span class="mono-label">YOUTUBE</span><strong>@Elisio_Lucius</strong><span>↗</span></a>
       </div>
     </section>
-
-    <!-- ─── CONTACT ─── -->
-    <section class="contact section" id="contact">
-      <div class="container">
-        <div class="contact-inner">
-          <div class="contact-left scroll-reveal">
-            <p class="section-label" data-i18n="contactIndex">07 — Contact</p>
-            <h2 class="contact-title" data-i18n-html="contactTitle">Let's build<br/>something that<br/><em>matters.</em></h2>
-            <p class="contact-sub" data-i18n="contactCopy">For collaborations, research, and ambitious ideas — get in touch.</p>
-          </div>
-          <div class="contact-right scroll-reveal">
-            <div class="contact-links">
-              <a class="contact-link magnetic" href="mailto:detshotcley@gmail.com">
-                <span class="cl-label">Email</span>
-                <span class="cl-val">detshotcley@gmail.com</span>
-                <span class="cl-arrow">↗</span>
-              </a>
-              <a class="contact-link magnetic" href="tel:+998997437975">
-                <span class="cl-label">Phone</span>
-                <span class="cl-val">+998 99 743 79 75</span>
-                <span class="cl-arrow">↗</span>
-              </a>
-              <a class="contact-link magnetic" href="https://t.me/Elisio_Lucius" target="_blank" rel="noopener">
-                <span class="cl-label">Telegram</span>
-                <span class="cl-val">@Elisio_Lucius</span>
-                <span class="cl-arrow">↗</span>
-              </a>
-              <a class="contact-link magnetic" href="https://www.youtube.com/@Elisio_Lucius" target="_blank" rel="noopener">
-                <span class="cl-label">YouTube</span>
-                <span class="cl-val">@Elisio_Lucius</span>
-                <span class="cl-arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ─── FOOTER ─── -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> VALIJONOV VALIJON</span>
-      <span class="footer-mid" data-i18n="footer">DESIGNED FOR FOCUS.</span>
-      <a href="https://github.com/detshotcley-creator" target="_blank" rel="noopener">GITHUB ↗</a>
-    </div>
-  </footer>
+  <footer class="section-shell site-footer"><span>© <span id="year"></span> VALIJONOV VALIJON</span><span data-i18n="footer">DESIGNED FOR FOCUS.</span><a href="https://github.com/detshotcley-creator" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></footer>
 
-  <!-- ─── ADMIN MODAL ─── -->
   <dialog class="modal" id="adminModal">
     <div class="modal-inner">
-      <button class="modal-close" id="closeModal" type="button" aria-label="Close">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
+      <button class="modal-close" id="closeModal" type="button" aria-label="Close">×</button>
       <div id="loginView">
-        <p class="section-label" data-i18n="privateAccess">Private Access</p>
-        <h2 data-i18n-html="modalTitle">Manage your <em>portfolio.</em></h2>
-        <p class="modal-copy" data-i18n="modalCopy">Sign in with your owner account to add projects and achievements.</p>
+        <p class="section-index" data-i18n="privateAccess">PRIVATE ACCESS</p><h2 data-i18n-html="modalTitle">Manage your <em>portfolio.</em></h2>
+        <p class="modal-copy" data-i18n="modalCopy">Sign in with your owner account to add projects and achievements. The public site stays view-only.</p>
         <form id="loginForm" class="form-stack">
           <label><span data-i18n="emailLabel">Email</span><input id="loginEmail" type="email" autocomplete="email" required /></label>
           <label><span data-i18n="passwordLabel">Password</span><input id="loginPassword" type="password" autocomplete="current-password" required /></label>
-          <button class="btn-primary" type="submit" data-i18n-html="signIn">Sign in <span>→</span></button>
+          <button class="button button-primary" type="submit" data-i18n-html="signIn">Sign in <span>→</span></button>
         </form>
+        <div class="login-divider"><span data-i18n="or">or</span></div>
+        <button class="magic-link-button" id="magicLinkButton" type="button" data-i18n="sendMagicLink">Send a secure sign-in link</button>
+        <p class="login-help" data-i18n="magicLinkHelp">A one-time link will be sent to your owner email.</p>
       </div>
       <div id="editorView" hidden>
-        <div class="editor-top">
-          <div>
-            <p class="section-label" data-i18n="ownerAccess">Owner Access</p>
-            <h2 data-i18n-html="editorTitle">Add an <em>entry.</em></h2>
-          </div>
-          <button class="btn-text" id="signOut" type="button" data-i18n="signOut">Sign out</button>
-        </div>
+        <div class="editor-top"><div><p class="section-index" data-i18n="ownerAccess">OWNER ACCESS</p><h2 data-i18n-html="editorTitle">Add an <em>entry.</em></h2></div><button class="text-button" id="signOut" type="button" data-i18n="signOut">Sign out</button></div>
         <form id="entryForm" class="form-stack">
-          <label><span data-i18n="entryType">Entry type</span>
-            <select id="entryType">
-              <option value="project" data-i18n="project">Project</option>
-              <option value="achievement" data-i18n="achievement">Achievement</option>
-            </select>
-          </label>
-          <label><span data-i18n="titleLabel">Title</span><input id="entryTitle" maxlength="80" required /></label>
-          <label><span data-i18n="descriptionLabel">Description</span><textarea id="entryDescription" rows="4" maxlength="360" required></textarea></label>
-          <label><span data-i18n="technologiesLabel">Technologies</span><small data-i18n="optionalComma">(optional, comma-separated)</small><input id="entryTechnologies" maxlength="120" /></label>
-          <label><span data-i18n="projectLink">Project link</span><small data-i18n="optional">(optional)</small><input id="entryLink" type="url" /></label>
-          <button class="btn-primary" type="submit" data-i18n-html="publishEntry">Publish entry <span>→</span></button>
+          <label><span data-i18n="entryType">Entry type</span><select id="entryType"><option value="project" data-i18n="project">Project</option><option value="achievement" data-i18n="achievement">Achievement</option></select></label>
+          <label><span data-i18n="titleLabel">Title</span><input id="entryTitle" maxlength="80" placeholder="e.g. Network Security Scanner" data-i18n-placeholder="titlePlaceholder" required /></label>
+          <label><span data-i18n="descriptionLabel">Description</span><textarea id="entryDescription" rows="4" maxlength="360" placeholder="What did you build or achieve?" data-i18n-placeholder="descriptionPlaceholder" required></textarea></label>
+          <label><span data-i18n="technologiesLabel">Technologies</span><small data-i18n="optionalComma">(optional, separate with commas)</small><input id="entryTechnologies" maxlength="120" placeholder="Python, Linux, Security" /></label>
+          <label><span data-i18n="projectLink">Project link</span><small data-i18n="optional">(optional)</small><input id="entryLink" type="url" placeholder="https://github.com/..." /></label>
+          <button class="button button-primary" type="submit" data-i18n-html="publishEntry">Publish entry <span>→</span></button>
         </form>
       </div>
       <div id="recoveryView" hidden>
-        <p class="section-label" data-i18n="recoveryAccess">Password Recovery</p>
-        <h2 data-i18n-html="recoveryTitle">Create a new <em>password.</em></h2>
+        <p class="section-index" data-i18n="recoveryAccess">PASSWORD RECOVERY</p><h2 data-i18n-html="recoveryTitle">Create a new <em>password.</em></h2>
+        <p class="modal-copy" data-i18n="recoveryCopy">Choose a new password for your private portfolio editor.</p>
         <form id="recoveryForm" class="form-stack">
           <label><span data-i18n="newPassword">New password</span><input id="newPassword" type="password" minlength="12" autocomplete="new-password" required /></label>
           <label><span data-i18n="confirmPassword">Confirm password</span><input id="confirmPassword" type="password" minlength="12" autocomplete="new-password" required /></label>
-          <button class="btn-primary" type="submit" data-i18n-html="savePassword">Save password <span>→</span></button>
+          <button class="button button-primary" type="submit" data-i18n-html="savePassword">Save password <span>→</span></button>
         </form>
       </div>
       <p class="form-message" id="formMessage" aria-live="polite"></p>
     </div>
   </dialog>
 
+  <dialog class="thoughts-modal" id="thoughtsModal" aria-labelledby="thoughtsTitle">
+    <div class="thoughts-visual" aria-hidden="true"></div>
+    <div class="thoughts-shade" aria-hidden="true"></div>
+    <div class="thoughts-inner">
+      <button class="thoughts-close" id="closeThoughts" type="button" aria-label="Close">×</button>
+      <p class="thoughts-kicker" data-i18n="thoughtsKicker">A QUIET ROOM FOR THOUGHT</p>
+      <p class="thoughts-count" id="thoughtsCount">01 / 05</p>
+      <div class="thoughts-copy">
+        <h2 id="thoughtsTitle" data-i18n-html="thoughtsTitle">Dostoyevsky<br /><em>reflections.</em></h2>
+        <blockquote id="dostoevskyQuote"></blockquote>
+        <p class="thoughts-attribution" id="dostoevskyAttribution"></p>
+      </div>
+      <div class="thoughts-footer">
+        <p data-i18n="thoughtsNote">Selected reflections in Uzbek</p>
+        <div class="thoughts-controls">
+          <button id="previousThought" type="button" aria-label="Previous reflection">←</button>
+          <div class="thoughts-dots" id="thoughtsDots" aria-label="Choose a reflection"></div>
+          <button id="nextThought" type="button" aria-label="Next reflection">→</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
-  <script src="portfolio-v2.js"></script>
 </body>
 </html>
