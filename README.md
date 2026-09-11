@@ -1,29 +1,75 @@
-# Phantom Portfolio
+# Phantom Portfolio — Valijonov Valijon
 
-A black-and-white portfolio for Valijonov Valijon (Phantom). It is a static website with a secure Supabase-backed editor, so projects and achievements can be added one at a time after it is online. The top-right controls let visitors switch between English, Russian, and Uzbek, plus daylight and night modes; their choice is remembered in the browser.
+Personal portfolio website for Valijonov Valijon (Phantom) — Software Engineer, Ethical Cybersecurity Specialist, and Scientific Innovator based in Tashkent, Uzbekistan.
 
-## Preview locally
+**Live site:** `https://<your-github-username>.github.io/<repo-name>/`
 
-Open `index.html` in a browser. For best results, serve this folder with a local web server.
+---
 
-## Connect the online editor (required before publishing)
+## File structure
 
-1. Create a free project at [Supabase](https://supabase.com/).
-2. In **SQL Editor**, run the full contents of `supabase.sql`.
-3. In **Authentication > Users**, create an email/password user for `detshotcley@gmail.com`. Do not share that password.
-4. In **Project Settings > API**, copy the project URL and the **anon public** key.
-5. Paste those two values into `SUPABASE_URL` and `SUPABASE_ANON_KEY` at the top of `app.js`.
-6. Deploy the folder to Netlify, Vercel, or GitHub Pages. The site works on any static host.
+```
+phantom-portfolio/
+├── index.html                      ← Main page
+├── styles-v2.css                   ← All styles
+├── portfolio-v2.js                 ← Animations & interactions
+├── app.js                          ← Supabase auth & CMS logic
+├── phantom-car-concept.jpg         ← Research images (web-optimized)
+├── phantom-block-concept.jpg
+├── phantom-wind-concept.jpg
+├── achievement-phantom-trinity-x3.jpg
+└── achievement-phantom-block.jpg
+```
 
-The public anon key is intended to be visible in browser code. The protection comes from the Row Level Security rules in `supabase.sql`, which only let `detshotcley@gmail.com` add or change portfolio entries.
+## Deploy to GitHub Pages
 
-## Using the editor
+### First time setup
 
-After deployment, press **Manage portfolio** (or **Add a project**) and sign in with your Supabase email and password. Fill in the small form to publish a project or achievement. Visitors will see it right away.
+```bash
+git init
+git add .
+git commit -m "Initial portfolio deploy"
+git branch -M main
+git remote add origin https://github.com/<your-username>/<repo-name>.git
+git push -u origin main
+```
 
-## Files
+Then in GitHub:
+1. Go to your repo → **Settings** → **Pages**
+2. Source: **Deploy from a branch**
+3. Branch: **main** / **(root)**
+4. Click **Save**
 
-- `index.html` — content and layout
-- `styles.css` — responsive visual design
-- `app.js` — online entry editor and database connection
-- `supabase.sql` — protected table and access rules
+Your site will be live at `https://<your-username>.github.io/<repo-name>/` in ~1 minute.
+
+### Updating the site
+
+```bash
+git add .
+git commit -m "Update portfolio"
+git push
+```
+
+GitHub Pages auto-deploys on every push to `main`.
+
+---
+
+## Supabase (optional — for admin panel)
+
+The project/achievement management panel uses Supabase. The credentials in `app.js` are safe to expose publicly as long as **Row Level Security (RLS)** is enabled on your Supabase project (see `supabase.sql`).
+
+If you want to reset or change credentials, edit these lines in `app.js`:
+
+```js
+const SUPABASE_URL  = "https://your-project.supabase.co";
+const SUPABASE_ANON_KEY = "your-anon-key";
+const OWNER_EMAIL   = "your@email.com";
+```
+
+---
+
+## Tech stack
+
+- Vanilla HTML / CSS / JS — no build tools, no dependencies
+- [Syne](https://fonts.google.com/specimen/Syne) + [Inter](https://fonts.google.com/specimen/Inter) + [DM Mono](https://fonts.google.com/specimen/DM+Mono) via Google Fonts
+- [Supabase](https://supabase.com) for backend (optional)

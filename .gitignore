@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Original PNG files (large — use .jpg versions)
+*.png
+
+# Zip archives
+*.zip
